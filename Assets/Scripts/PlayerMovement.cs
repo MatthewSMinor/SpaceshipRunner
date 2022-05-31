@@ -5,9 +5,11 @@ using UnityEngine.UI;
 public class PlayerMovement : MonoBehaviour
 {
     public Text scoreText;
+    public Text aliensCapturedText;
     public int jumpSpeed = 3;
     public int playerSpeed = 5;
     private Rigidbody2D rb;
+    private int aliensCaptured = 0;
 
     private int playerScore = 0;
 
@@ -34,12 +36,18 @@ public class PlayerMovement : MonoBehaviour
         {
             Application.LoadLevel("TitleScreen");
         }
+
+        else if (other.gameObject.tag == "Alien")
+        {
+            aliensCaptured++;
+            aliensCapturedText.GetComponent<UnityEngine.UI.Text>().text = $"Aliens: {aliensCaptured}";
+            Destroy(other.gameObject);
+        }
     }
 
     void FixedUpdate()
     {
         rb.AddForce(transform.right * playerSpeed * Time.deltaTime);
-
     }
 
     public IEnumerator PlayerScoreCalculator()
