@@ -49,9 +49,6 @@ public class AstroidGeneration : MonoBehaviour
                 Quaternion.identity
             );
 
-            // TODO: Does not seem to be working.
-            astroidPrefab.transform.Rotate(Vector3.down, Space.Self);
-
             // Grab the astroid's rigid body component and apply force to it.
             var rb = astroidPrefab.GetComponent<Rigidbody2D>();
             rb.AddForce(new Vector2(-1 * Random.Range(minAstroidSpeed, maxAstroidSpeed),
