@@ -55,7 +55,7 @@ public class AstroidGeneration : MonoBehaviour
                                     Random.Range(bottomOfScreen - yVariance, topOfScreen + yVariance)));
 
             // Wait on interval before spawning the next astroid.
-            yield return new WaitForSeconds(0.3f);
+            yield return new WaitForSeconds(0.8f);
         }
     }
 

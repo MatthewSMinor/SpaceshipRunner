@@ -28,6 +28,9 @@ public class PlayerMovement : MonoBehaviour
         {
             rb.velocity = new Vector2(jumpSpeed/2, jumpSpeed);
         }
+
+        // Rotate the ship right on the z axis based on how fast the horizontal velocity is.
+        transform.rotation.SetAxisAngle(Vector3.down, rb.velocity.x * -1);
     }
 
     void OnCollisionEnter2D(Collision2D other)

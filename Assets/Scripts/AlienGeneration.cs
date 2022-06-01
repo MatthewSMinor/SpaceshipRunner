@@ -49,9 +49,6 @@ public class AlienGeneration : MonoBehaviour
                 Quaternion.identity
             );
 
-            // TODO: Does not seem to be working.
-            alienPrefab.transform.Rotate(Vector3.down, Space.Self);
-
             // Grab the Alien's rigid body component and apply force to it.
             var rb = alienPrefab.GetComponent<Rigidbody2D>();
             rb.AddForce(new Vector2(-1 * Random.Range(minAlienSpeed, maxAlienSpeed),

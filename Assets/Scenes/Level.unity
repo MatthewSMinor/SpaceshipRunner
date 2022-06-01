@@ -501,13 +501,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 946279775}
-  m_LocalRotation: {x: 0, y: 0, z: -0.17364825, w: 0.9848078}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -20}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!60 &946279778
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -804,9 +804,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   alien: {fileID: 5205262695863853158, guid: 76464df233dc3844383a74a93f44af9d, type: 3}
-  minAlienSpeed: 3
-  maxAlienSpeed: 10
-  yVariance: 20
+  minAlienSpeed: 20
+  maxAlienSpeed: 40
+  yVariance: 6
 --- !u!4 &1942384861
 Transform:
   m_ObjectHideFlags: 0
